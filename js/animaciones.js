@@ -210,7 +210,7 @@ function actualizarContador() {
 
     contador.innerHTML = `
     <div class="contador-fondo">
-            <h2>MORTHALIS <br> facultad de artes <br> 60 7 y 8 <br> aula 202 <br> 18:00 hrs</h2>
+            <h2>MORTHALIS <br> facultad de artes <br> 60 7 y 8 <br> aula 212 <br> 18:00 hrs</h2>
         </div>
   `;
     clearInterval(intervalo);
@@ -571,4 +571,5 @@ crearAjusteProgresivo("1365", 1024, 1365, [
   { sel: "#contador-wrapper", max: 500 },
   { sel: "section.historia", max: 500 },
 ]);
+
 
