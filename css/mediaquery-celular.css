@@ -1,0 +1,1746 @@
+/* === VERSIÓN CELULAR === */
+/* === (0 a 768) === LISTO AJUSTAR CONTADOR 601*/
+@media (min-width: 601px) and (max-width: 768px) { 
+  /* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 20%;
+    right: 0;
+    left: auto;
+    width: 400px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-1%) translateY(35%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 10px; /* 💡 separa un poco del párrafo */
+    width: 40%;
+  font-size: clamp(20px, 2vw + 1rem, 24px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: 1.5;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 100%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 210%;
+    left: 110%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.6);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-50%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 47%;
+    top: 86%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 30%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 46%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 40%;
+  width: 139%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 67%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top: 22%; /* baja un poco para encajar con el tronco */
+  left: 40%;
+  width: 139%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+   /* === 480–600px: phablets ===  LISTO AJUSTAR CONTADOR 480 */ 
+@media (min-width: 480px) and (max-width: 600px) {
+ /* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 15%;
+    right: 0;
+    left: auto;
+    width: 350px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(0%) translateY(15%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 10px; /* 💡 separa un poco del párrafo */
+    width: 40%;
+  font-size: clamp(20px, 2vw + 1rem, 24px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(12px, 2vw, 14px);
+  line-height: 1.5;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 163%;
+    left: 105%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.5);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-30%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 66%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 25%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 37%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 53%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top: 36%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* === 430–479px: grandes === AJUSTAR JS */
+@media (min-width: 430px) and (max-width: 479px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 15%;
+    right: 0;
+    left: auto;
+    width: 300px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-5%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+    width: 50%;
+  font-size: clamp(12px, 2vw + 1rem, 16px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(10px, 2vw, 14px);
+  line-height: 1.35;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 132%;
+    left: 100%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.45);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-20%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 47%;
+    top: 53%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 20%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 29%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 42%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:29%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* === 413–429px: medianos === LISTO AJUSTAR CONTADOR 390 */
+@media (min-width: 413px) and (max-width: 429px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 15%;
+    right: 0;
+    left: auto;
+    width: 250px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-12%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+  width: 40%;
+  font-size: clamp(12px, 2vw + 1rem, 16px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(10px, 2vw, 14px);
+  line-height: 1.3;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 117%;
+    left: 97.5%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.35);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+    transform: translateY(calc(100% / var(--site-scale))) !important;
+    transform-origin: top center;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 45%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 15%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 27%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 38%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:26%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* 394–412 mi celular */
+@media (min-width: 394px) and (max-width: 412px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 15%;
+    right: 0;
+    left: auto;
+    width: 250px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-20%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+  width: 40%;
+  font-size: clamp(12px, 2vw + 1rem, 16px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(10px, 2vw, 14px);
+  line-height: 1.3;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 106%;
+    left: 97.5%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.35);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-10%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 41%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 15%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 24%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 33%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:22%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* Opcional: Mostrarlo solo en móvil */
+@media (min-width: 700px) {
+  #hitbox-global { display: none; }
+}
+
+
+/* 393 mi celular */
+@media (min-width: 390px) and (max-width: 393px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 15%;
+    right: 0;
+    left: auto;
+    width: 250px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-20%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+  width: 40%;
+  font-size: clamp(12px, 2vw + 1rem, 16px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(10px, 2vw, 14px);
+  line-height: 1.3;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 99%;
+    left: 96%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.35);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 70%;
+    --x-base: 70%;
+    --y-base: 100%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 150%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-5%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 60%;
+    --x-base: 50%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 150%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 40%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 15%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 22%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 31%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:22%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* === 360–389px: pequeños === */
+@media (min-width: 360px) and (max-width: 389px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 20%;
+    right: 0;
+    left: auto;
+    width: 200px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-18%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+  width: 40%;
+  font-size: clamp(10px, 2vw + 1rem, 14px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(10px, 2vw, 12px);
+  line-height: 1.3;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 106%;
+    left: 96%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.3);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(-10%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 43%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 15%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 24%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 34%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:23%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+/* === 320–359px: celulares mini === */
+@media (min-width: 320px) and (max-width: 359px) {
+/* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 17%;
+    right: 0;
+    left: auto;
+    width: 200px;
+    transform: none !important;
+  }
+
+  /* 🔹 TEXTOS */
+  section.historia { 
+    padding: 20px; 
+    transform: translateX(-3%) translateY(-12%) !important;
+    width: 100%;
+  }
+  
+  section.historia h2 { 
+ margin-bottom: 0px; /* 💡 separa un poco del párrafo */
+  width: 35%;
+  font-size: clamp(10px, 2vw + 1rem, 12px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(8px, 2vw, 10px);
+  line-height: 1.3;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 60%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 98%;
+    left: 94.5%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.3);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+/* 🔹 Mueve todo el árbol hacia arriba en móvil */
+.seccion-arbol {
+  transform: translateY(0%) !important; /* 🔼 sube todo el árbol */
+  transition: transform 0.3s ease;
+}
+
+/* === 🌌 ESCENARIO EN MÓVIL — MÁS ALTO, MISMO EFECTO DE RECORTE === */
+.escenario {
+min-height: 90vh;
+  overflow: hidden;  /* mantiene el recorte del parallax */
+  position: relative;
+}
+
+  /* 🔹 TODO EL ÁRBOL */
+  #hojasarbol,
+  #layer-brilloramas,
+  #ramas,
+  #layer-brilloraices,
+  #layer-descendiente {
+    transform: translateX(-50%) translateY(85%) !important;
+    width: 130%;    
+    left: 35%;
+  }
+
+  /* 🔹 Reemplaza ramas por arbolcompleto.png */
+  #ramas {
+    content: url("../img/arbolcompleto.png");
+    transform: translateX(-55%) translateY(62%);
+    width: 139%;
+    left: 40%;
+  }
+
+  #ramas,
+  #hojasarbol,
+  #layer-brilloramas,
+  #layer-brilloraices {
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+  /* 🔹 Cambia hojas por la versión móvil */
+  #hojasarbol {
+    content: url("../img/hojasarbolcelular.png");
+    transform: translateX(-55%) translateY(62%) !important;
+    width: 139%;
+    left: 40%;
+  }
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 48%;
+    top: 38.5%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+  /* === 🍎 FRUTOS EN MÓVIL — DESACTIVADOS === */
+  #layer-frutos-ind,
+  #layer-frutos-ind.caida,
+  #layer-frutos-ind.respira,
+  #layer-frutos-ind.subida {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+    width: 139%;
+    left: 60%;
+    top: 90%;
+    position: absolute;
+  }
+
+  /* 🔹 Desactiva animaciones generales también */
+  #layer-frutos,
+  #layer-descendiente {
+    animation: none !important;
+    transition: none !important;
+    transform: translateX(-55%) translateY(62%) !important;
+  }
+
+    #layer-brilloramas{
+        top: 15%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 42%;
+    }
+
+  /* === 🍎 FRUTOS Y RAÍCES EN MÓVIL — ALINEADOS AL ÁRBOL === */
+#layer-frutos {
+  position: absolute;
+  top: 23%; /* ajusta verticalmente según necesites (30–40%) */
+  left: 38%;
+  width: 139%;
+  transform: translateX(-55%) translateY(60%) !important;
+  z-index: 102; /* justo detrás del descendiente */
+}
+
+#layer-frutos-ind,
+#layer-frutos-ind.caida,
+#layer-frutos-ind.respira,
+#layer-frutos-ind.subida {
+  animation: none !important;
+  transition: none !important;
+  transform: translateX(-55%) translateY(62%) scale(0.1) !important;
+  width: 139%;
+  left: 65%;
+  top: 31%;
+  position: absolute;
+}
+
+#layer-brilloraices {
+  position: absolute;
+  top:22%; /* baja un poco para encajar con el tronco */
+  left: 46.8%;
+  width: 120%;
+  transform: translateX(-55%) translateY(62%) !important;
+  z-index: 101; /* debajo de frutos */
+}
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
+
+
+/* === HITBOX GLOBAL PARA MÓVIL === */
+#hitbox-global {
+  position: fixed;                  /* SIEMPRE sobre todo */
+  top: 50%;                         /* centro vertical */
+  left: 65%;                        /* centro horizontal */
+  transform: translate(-50%, -50%);
+  width: 180px;                     /* tamaño del cuadrado */
+  height: 280px;
+  background: rgba(255, 255, 255, 0);  /* lo ves mientras ubicamos */
+  z-index: 999999999 !important;    /* nada puede taparlo */
+  pointer-events: auto !important;
+}
+

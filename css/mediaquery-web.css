@@ -1,0 +1,153 @@
+/* === 💻 > 1920 === */
+@media (min-width: 1920px) {
+  /* 🕓 CONTADOR */
+  .contador-wrapper {
+    position: absolute;
+    top: 0; /* el JS seguirá actualizando top dinámicamente */
+    left: 50%;
+    width: 15%; /* hace que el área sea más ancha */
+    transform: translateX(200px) scale(1.1); /* mueve hacia la derecha */
+  }
+
+  /* 👤 DESCENDIENTE */
+  #layer-descendiente {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(110%);
+    width: 100%;
+  }
+}
+
+/* === 💻 1600-1919  === */
+@media (min-width: 1600px) and (max-width: 1919px) {
+  /* 🕓 CONTADOR */
+  .contador-wrapper {
+    top: 0%;
+    left: 92%;
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  /* 👤 DESCENDIENTE */
+  #layer-descendiente {
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    width: 100%;
+  }
+}
+
+/* === 💻 1366 - 1599 === */
+@media (min-width: 1366px) and (max-width: 1599px) {
+  .contador-wrapper {
+    top: 160px;
+    left: 100%;
+    transform: translateX(-55%) scale(1);
+  }
+
+  #layer-descendiente {
+    left: 50%;
+    transform: translateX(-50%) translateY(130%);
+    width: 95%;
+  }
+}
+
+/* === 💻 1024 - 1365 === */
+@media (min-width: 1024px) and (max-width: 1365px) {
+  
+ /* 🔹 TITULO MORTHALIS */
+  .titulo {
+    top: 35%;
+    right: 0;
+    left: auto;
+    width: 500px;
+    transform: none !important;
+  }
+  section.historia h2 { 
+ margin-bottom: 10px; /* 💡 separa un poco del párrafo */
+    width: 40%;
+  font-size: clamp(24px, 2vw + 1rem, 32px);
+  text-align: left; /* asegura alineación */
+  }
+
+section.historia p { 
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.5;
+  margin-left: 0 !important; /* 👈 elimina el empuje a la derecha */
+  text-align: left; /* 👈 asegura mismo inicio que el h2 */
+  width: 100%;
+}
+
+
+/* 🔹 CONTADOR — reposicionado en móvil */
+  #contador-wrapper {
+    position: relative;
+    top: 280%;
+    left: 119%;
+    --contador-offset: 0px;
+    transform: translateX(-50%) translateY(var(--contador-offset)) scale(0.75);
+    transform-origin: top center;
+    width: 100%;
+    z-index: 200;
+  }
+  /* 🔹 ÁRBOLES */
+  #arbol-amarillo { 
+    left: 58%;
+    --x-base: -50%;
+    --y-base: 10px;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 120%;
+  }
+
+/* 🔹 FONDO DEL ÁRBOL — más ancho en móvil */
+#arbolesfondo-solo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;              /* antes 100vw — ahora más ancho */
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;   /* para que llene horizontalmente */
+  background-repeat: no-repeat;
+  background-position: center top;
+  z-index: 0;
+
+}
+
+  /* 🔹 SELEN */
+  #selen { 
+    left: 50%;
+    --x-base: -30%;
+    --y-base: 0%;
+    transform: translate(var(--x-base), var(--y-base));
+    width: 110%;    
+  }
+
+  /* 🔹 DESCENDIENTE */
+  #layer-descendiente {
+    left: 80%;
+    top: 110%;
+    transform: translateX(-62%) translateY(150%) !important;
+    width: 100%; 
+  }
+
+
+ /* quitamos la anulación previa */
+  #layer-frutos-ind {
+    animation: none !important;
+  }
+
+  @keyframes palpitarFrutos {
+    0%, 100% {
+      transform: translateX(-55%) translateY(62%) scale(0.1);
+    }
+    50% {
+      transform: translateX(-55%) translateY(62%) scale(0.4);
+    }
+  }
+
+  /* aplicamos el latido con máxima prioridad */
+  body #layer-frutos-ind {
+    animation: palpitarFrutos 1.8s ease-in-out infinite !important;
+    transform-origin: center center !important;
+  }
+}
